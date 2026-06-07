@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Gallery | ELITE Institute of Engineering | Campus Life & Events Photos</title>
+  <meta name="description" content="Explore ELITE Institute's campus gallery - photos of campus, events, students, facilities, sports, cultural fest, tech fest, and more.">
+  <meta name="keywords" content="ELITE gallery, campus photos, events photos, students, facilities, cultural fest, tech fest">
+  <link rel="icon" type="image/jpeg" href="assets/images/jpg/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- Counselling Bar -->
+<div class="counselling-bar"><div class="container"><span><i class="fas fa-code"></i> <strong>TNEA Counselling Code: 1442</strong> | <i class="fas fa-calendar-alt"></i> Admissions Open 2026</span><span><i class="fas fa-phone-alt"></i> Helpline: +91 90470 40413</span><span class="highlight"><i class="fas fa-graduation-cap"></i> Limited Seats - Apply Now!</span></div></div>
+
+<!-- Navbar -->
+<nav class="navbar"><div class="container nav-container"><div class="logo"><img src="assets/images/jpg/logo.jpg" alt="ELITE Logo" class="logo-img" onerror="this.src='https://placehold.co/55x55/D4AF37/000?text=E'"><div class="logo-text">ELITE<br><span>INSTITUTE OF ENGINEERING</span></div></div><ul class="nav-links" id="navLinks"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="admissions.html" class="nav-link">Admissions</a></li><li><a href="departments.html" class="nav-link">Departments</a></li><li><a href="placement.html" class="nav-link">Placements</a></li><li><a href="facilities.html" class="nav-link">Facilities</a></li><li><a href="events.html" class="nav-link">Events</a></li><li><a href="gallery.html" class="nav-link active">Gallery</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul><div style="display: flex; gap: 15px; align-items: center;"><button class="theme-toggle" id="themeToggle"><i class="fas fa-sun"></i> Light</button><button class="burger" id="burgerBtn"><span></span><span></span><span></span></button></div></div></nav>
+
+<main>
+  <!-- Hero Section -->
+  <section class="page-hero" style="background-image: url('assets/images/jpg/campus.jpg');"><div class="container hero-content text-center"><div class="hero-badge"><i class="fas fa-images"></i> MOMENTS CAPTURED</div><h1 class="hero-title">Campus <span class="gradient-gold">Gallery</span></h1><p class="hero-subtitle">A glimpse into the vibrant life at ELITE Institute</p></div></section>
+
+  <!-- Gallery Filter Bar -->
+  <div class="gallery-filter-bar"><div class="container"><div class="filter-container"><div class="filter-buttons" id="filterButtons"><button class="filter-btn active" data-filter="all">All Photos</button><button class="filter-btn" data-filter="campus">Campus</button><button class="filter-btn" data-filter="facilities">Facilities</button><button class="filter-btn" data-filter="students">Students</button><button class="filter-btn" data-filter="events">Events</button><button class="filter-btn" data-filter="sports">Sports</button></div><div class="search-gallery"><i class="fas fa-search"></i><input type="text" id="searchGallery" placeholder="Search photos..."></div></div></div></div>
+
+  <!-- Gallery Stats -->
+  <div class="gallery-stats" style="background: var(--gradient-gold); padding: 1rem 0;"><div class="container"><div class="stat-badge" style="display:inline-block; background:rgba(0,0,0,0.2); padding:5px 15px; border-radius:30px; margin:0 10px;"><i class="fas fa-image"></i> <span id="photoCount">0</span> Photos</div><div class="stat-badge" style="display:inline-block; background:rgba(0,0,0,0.2); padding:5px 15px; border-radius:30px; margin:0 10px;"><i class="fas fa-camera"></i> Capturing Moments Since 1978</div></div></div>
+
+  <!-- Masonry Gallery Grid -->
+  <div class="gallery-section"><div class="container"><div class="gallery-masonry" id="galleryGrid"></div></div></div>
+
+  <!-- CTA Section -->
+  <section style="background: var(--bg-secondary);"><div class="container"><div class="cta-grand"><h2>Share Your <span style="color: #000;">ELITE Memories</span></h2><p>Tag us on social media with #ELITEMemories to get featured!</p><div class="cta-buttons"><a href="https://www.instagram.com" target="_blank" class="btn btn-primary" style="background: #000; color: var(--gold);"><i class="fab fa-instagram"></i> Share on Instagram</a><button class="btn btn-outline" onclick="notifyInfo('📸 Upload your ELITE memories! Email to memories@elite.edu')"><i class="fas fa-upload"></i> Upload Photo</button><a href="admissions.html" class="btn btn-outline" style="background: #000; color: var(--gold);"><i class="fas fa-arrow-right"></i> Apply Now</a></div></div></div></section>
+
+  <!-- Schedule Campus Visit Modal -->
+  <div id="scheduleModal" class="schedule-modal"><div class="schedule-modal-content"><div class="schedule-modal-header"><h2><i class="fas fa-calendar-check"></i> Schedule Your Campus Visit</h2><span class="schedule-modal-close" onclick="closeScheduleModal()">&times;</span></div><div class="schedule-modal-body"><div class="visit-options"><div class="visit-option active" onclick="selectVisitType('physical')"><i class="fas fa-building"></i><h3>Physical Visit</h3><p>Visit our 120-acre campus</p></div><div class="visit-option" onclick="selectVisitType('virtual')"><i class="fas fa-video"></i><h3>Virtual Tour</h3><p>Interactive online tour</p></div></div><form id="scheduleForm" class="schedule-form"><div class="form-row"><div class="form-group"><label><i class="fas fa-user"></i> Full Name *</label><input type="text" id="visitName" required placeholder="Enter your full name"></div><div class="form-group"><label><i class="fas fa-envelope"></i> Email Address *</label><input type="email" id="visitEmail" required placeholder="your@email.com"></div></div><div class="form-row"><div class="form-group"><label><i class="fas fa-phone-alt"></i> Phone Number *</label><input type="tel" id="visitPhone" required placeholder="10-digit mobile number"></div><div class="form-group"><label><i class="fas fa-map-marker-alt"></i> City</label><input type="text" id="visitCity" placeholder="Your city"></div></div><div class="form-row"><div class="form-group"><label><i class="fas fa-calendar-day"></i> Preferred Date *</label><input type="date" id="visitDate" required></div><div class="form-group"><label><i class="fas fa-clock"></i> Preferred Time *</label><select id="visitTime" required><option value="">Select Time Slot</option><option value="10:00 AM">10:00 AM - 11:00 AM</option><option value="11:00 AM">11:00 AM - 12:00 PM</option><option value="12:00 PM">12:00 PM - 1:00 PM</option><option value="2:00 PM">2:00 PM - 3:00 PM</option><option value="3:00 PM">3:00 PM - 4:00 PM</option></select></div></div><div class="form-group"><label><i class="fas fa-graduation-cap"></i> Course Interested In *</label><select id="visitCourse" required><option value="">Select Course</option><option>B.E Computer Science & Engineering</option><option>B.E CSE (Cyber Security)</option><option>B.Tech AI & Data Science</option><option>B.E Electronics & Communication</option><option>B.E Electrical & Electronics</option><option>B.E Civil Engineering</option><option>B.Tech Biotechnology</option><option>MBA Finance & Marketing</option></select></div><input type="hidden" id="visitType" value="physical"><button type="submit" class="btn-submit"><i class="fas fa-calendar-check"></i> Confirm Your Visit</button><p class="form-note"><i class="fas fa-info-circle"></i> Our admission team will contact you within 24 hours.</p></form></div></div></div>
+</main>
+
+<!-- Footer -->
+<footer><div class="container"><div class="footer-grid"><div class="footer-col"><h4>ELITE Institute of Engineering</h4><p>Mambakkam – Medavakkam Main Road, Ponmar, Chennai, Tamil Nadu 600127</p><p><i class="fas fa-map-marker-alt"></i> Counselling Code: <strong style="color: var(--gold);">1442</strong></p><div class="social-icons"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><i class="fas fa-chevron-right"></i> <a href="admissions.html">Admissions 2026</a></li><li><i class="fas fa-chevron-right"></i> <a href="departments.html">Courses & Programmes</a></li><li><i class="fas fa-chevron-right"></i> <a href="placement.html">Placement Cell</a></li><li><i class="fas fa-chevron-right"></i> <a href="gallery.html">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact Info</h4><p><i class="fas fa-phone-alt"></i> Admissions: <a href="tel:+919047040413">+91 90470 40413</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:info@elite.edu">info@elite.edu</a></p><p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5:30PM</p></div><div class="footer-col"><h4>Newsletter</h4><form id="newsletterForm" class="newsletter-form"><input type="email" placeholder="Your email address" required><button type="submit" class="btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Subscribe</button></form></div></div><div class="footer-bottom"><p>© 2026 ELITE Institute of Engineering. All rights reserved.</p></div></div></footer>
+
+<!-- AI Assistant -->
+<div class="ai-assistant"><div class="ai-fab" id="aiFab"><i class="fas fa-robot"></i></div><div class="ai-popup" id="aiPopup"><div class="ai-header"><span>ELITE AI Assistant</span><i class="fas fa-times" id="closeAiPopup"></i></div><div class="ai-messages" id="aiMessages"><div class="ai-msg ai-bot">Hello! Ask me about campus photos, events, or facilities!</div></div><div class="ai-input-area"><input type="text" id="aiInput"><button id="aiSendBtn"><i class="fas fa-paper-plane"></i></button></div></div></div>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float" onclick="window.open('https://wa.me/919047040413', '_blank')"><i class="fab fa-whatsapp"></i></div>
+
+<!-- Back to Top -->
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox"><span class="lightbox-close">&times;</span><img id="lightboxImg" src=""><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+<script src="assets/js/utilities.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/ai-assistant.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+const galleryItems = [
+  { src: "assets/images/jpg/campus.jpg", category: "campus", title: "Main Campus View", description: "Beautiful 120-acre green campus" },
+  { src: "assets/images/jpg/campus-arial-view.jpg", category: "campus", title: "Campus Aerial View", description: "Aerial view of our sprawling campus" },
+  { src: "assets/images/jpg/central-library-interior.jpg", category: "facilities", title: "Central Library", description: "State-of-the-art library with 2.5L+ books" },
+  { src: "assets/images/jpg/engineering-lab-practical.jpg", category: "facilities", title: "Engineering Lab", description: "Advanced research laboratories" },
+  { src: "assets/images/jpg/smart-classroom-lecture.jpg", category: "facilities", title: "Smart Classroom", description: "Digital classrooms with modern aids" },
+  { src: "assets/images/jpg/hostel-accommodation-exterior.jpg", category: "facilities", title: "Modern Hostels", description: "Comfortable accommodation" },
+  { src: "assets/images/jpg/students-library-studying.jpg", category: "students", title: "Students at Library", description: "Focused study sessions" },
+  { src: "assets/images/jpg/students-group-discussion.jpg", category: "students", title: "Group Discussion", description: "Collaborative learning" },
+  { src: "assets/images/jpg/cultural-fest-stage.jpg", category: "events", title: "Cultural Fest", description: "Annual cultural celebration" },
+  { src: "assets/images/jpg/techfest-robotics-competition.jpg", category: "events", title: "Tech Fest", description: "Robotics competition" },
+  { src: "assets/images/jpg/convocation-graduation-ceremony.jpg", category: "events", title: "Convocation", description: "Graduation ceremony" },
+  { src: "assets/images/jpg/sports-cricket-ground.jpg", category: "sports", title: "Cricket Ground", description: "International standard ground" },
+  { src: "assets/images/jpg/indoor-sports-gymnasium.jpg", category: "sports", title: "Indoor Sports", description: "Modern gymnasium" }
+];
+
+let currentGalleryFilter = "all";
+let currentGallerySearch = "";
+let currentLightboxIndex = 0;
+let filteredItems = [];
+
+function renderGallery() {
+  filteredItems = galleryItems.filter(item => (currentGalleryFilter === "all" || item.category === currentGalleryFilter) && (item.title.toLowerCase().includes(currentGallerySearch) || item.description.toLowerCase().includes(currentGallerySearch)));
+  const grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+  if (filteredItems.length === 0) { grid.innerHTML = `<div class="no-results"><i class="fas fa-search"></i><h3>No photos found</h3><button class="btn btn-outline" onclick="resetFilters()">Reset Filters</button></div>`; document.getElementById('photoCount').innerText = '0'; return; }
+  grid.innerHTML = filteredItems.map((item, index) => `<div class="gallery-item" data-index="${index}" onclick="openLightbox(${index})"><img src="${item.src}" alt="${item.title}" loading="lazy" onerror="this.src='assets/images/jpg/logo.jpg'"><div class="gallery-overlay"><h4>${item.title}</h4><p>${item.description}</p></div></div>`).join('');
+  document.getElementById('photoCount').innerText = filteredItems.length;
+}
+
+function openLightbox(index) {
+  currentLightboxIndex = index;
+  const item = filteredItems[currentLightboxIndex];
+  if (!item) return;
+  const img = document.getElementById('lightboxImg');
+  const caption = document.getElementById('lightboxCaption');
+  if (img) img.src = item.src;
+  if (caption) caption.innerHTML = `<strong>${item.title}</strong><br>${item.description}`;
+  document.getElementById('lightbox')?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() { document.getElementById('lightbox')?.classList.remove('open'); document.body.style.overflow = ''; }
+function prevImage() { currentLightboxIndex = (currentLightboxIndex > 0) ? currentLightboxIndex - 1 : filteredItems.length - 1; openLightbox(currentLightboxIndex); }
+function nextImage() { currentLightboxIndex = (currentLightboxIndex < filteredItems.length - 1) ? currentLightboxIndex + 1 : 0; openLightbox(currentLightboxIndex); }
+
+document.getElementById('searchGallery')?.addEventListener('input', (e) => { currentGallerySearch = e.target.value.toLowerCase(); renderGallery(); });
+document.querySelectorAll('.filter-btn').forEach(btn => { btn.addEventListener('click', () => { document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); currentGalleryFilter = btn.dataset.filter; renderGallery(); }); });
+document.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
+document.querySelector('.lightbox-prev')?.addEventListener('click', prevImage);
+document.querySelector('.lightbox-next')?.addEventListener('click', nextImage);
+document.getElementById('lightbox')?.addEventListener('click', (e) => { if (e.target === document.getElementById('lightbox')) closeLightbox(); });
+document.addEventListener('keydown', (e) => { if (document.getElementById('lightbox')?.classList.contains('open')) { if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') prevImage(); if (e.key === 'ArrowRight') nextImage(); } });
+renderGallery();
+
+document.getElementById('newsletterForm')?.addEventListener('submit', (e) => { e.preventDefault(); notifySuccess('✓ Thank you for subscribing!'); e.target.reset(); });
+</script>
+</body>
+</html>

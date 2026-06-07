@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Departments | ELITE Institute of Engineering | Top Engineering Programs Chennai</title>
+  <meta name="description" content="Explore B.E, B.Tech, and MBA programs at ELITE Institute. Specializations in CSE, AI & Data Science, Cyber Security, and more.">
+  <meta name="keywords" content="engineering departments, CSE, AI & Data Science, Cyber Security, ECE, EEE, Civil, Biotechnology, MBA">
+  <link rel="icon" type="image/jpeg" href="assets/images/jpg/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- Counselling Bar -->
+<div class="counselling-bar">
+  <div class="container">
+    <span><i class="fas fa-code"></i> <strong>TNEA Counselling Code: 1442</strong> | <i class="fas fa-calendar-alt"></i> Admissions Open 2026</span>
+    <span><i class="fas fa-phone-alt"></i> Helpline: +91 90470 40413 | <i class="fas fa-envelope"></i> admissions@elite.edu</span>
+    <span class="highlight"><i class="fas fa-graduation-cap"></i> Limited Seats - Apply Now!</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="assets/images/jpg/logo.jpg" alt="ELITE Logo" class="logo-img" onerror="this.src='https://placehold.co/55x55/D4AF37/000?text=E'">
+      <div class="logo-text">ELITE<br><span>INSTITUTE OF ENGINEERING</span></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+      <li><a href="departments.html" class="nav-link active">Departments</a></li>
+      <li><a href="placement.html" class="nav-link">Placements</a></li>
+      <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-sun"></i> Light</button>
+      <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section class="page-hero" style="background-image: url('assets/images/jpg/smart-classroom-lecture.jpg');">
+    <div class="container hero-content text-center">
+      <div class="hero-badge"><i class="fas fa-building-columns"></i> ACADEMIC EXCELLENCE</div>
+      <h1 class="hero-title">Our <span class="gradient-gold">Departments</span></h1>
+      <p class="hero-subtitle">9 specialized programs • Industry-aligned curriculum • 94% Placement Record</p>
+    </div>
+  </section>
+
+  <!-- Search & Filter Bar -->
+  <div class="search-filter-bar">
+    <div class="container">
+      <div class="filter-container">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchDept" placeholder="Search departments by name, specialization...">
+        </div>
+        <div class="filter-buttons" id="filterChips">
+          <button class="filter-btn active" data-filter="all">All Departments</button>
+          <button class="filter-btn" data-filter="engineering">Engineering</button>
+          <button class="filter-btn" data-filter="science">Science</button>
+          <button class="filter-btn" data-filter="management">Management</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Departments Grid -->
+  <section>
+    <div class="container">
+      <div class="dept-cards-grid" id="departmentsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="dept-stats-section" style="background: var(--gradient-gold); padding: 2rem 0;">
+    <div class="container">
+      <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+        <div class="stat-item" style="background: rgba(255,255,255,0.95); border-radius: 16px; padding: 1rem; text-align: center;"><i class="fas fa-chalkboard-user"></i><div class="stat-number" data-count="120">0</div><div class="stat-label">Expert Faculty</div></div>
+        <div class="stat-item" style="background: rgba(255,255,255,0.95); border-radius: 16px; padding: 1rem; text-align: center;"><i class="fas fa-microscope"></i><div class="stat-number" data-count="12">0</div><div class="stat-label">Centers of Excellence</div></div>
+        <div class="stat-item" style="background: rgba(255,255,255,0.95); border-radius: 16px; padding: 1rem; text-align: center;"><i class="fas fa-handshake"></i><div class="stat-number" data-count="60">0+</div><div class="stat-label">Industry Partners</div></div>
+        <div class="stat-item" style="background: rgba(255,255,255,0.95); border-radius: 16px; padding: 1rem; text-align: center;"><i class="fas fa-file-alt"></i><div class="stat-number" data-count="500">0+</div><div class="stat-label">Research Papers</div></div>
+        <div class="stat-item" style="background: rgba(255,255,255,0.95); border-radius: 16px; padding: 1rem; text-align: center;"><i class="fas fa-laptop-code"></i><div class="stat-number" data-count="45">0+</div><div class="stat-label">Specialized Labs</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose ELITE -->
+  <section><div class="container"><div class="section-header"><div class="section-badge">WHY CHOOSE US</div><h2 class="section-title">Why Our <span class="gold-text">Departments</span> Stand Out</h2></div><div class="why-elite-grid"><div class="why-card"><i class="fas fa-flask"></i><h3>Research Excellence</h3><p>200+ research papers annually, 35+ patents filed</p></div><div class="why-card"><i class="fas fa-globe"></i><h3>Global Collaborations</h3><p>60+ international MoUs for student exchange</p></div><div class="why-card"><i class="fas fa-chalkboard-user"></i><h3>Industry-Aligned Curriculum</h3><p>Updated with input from 500+ industry partners</p></div><div class="why-card"><i class="fas fa-laptop-code"></i><h3>Placement Training</h3><p>Dedicated placement cell with 94% record</p></div></div></div></section>
+
+  <!-- CTA Section -->
+  <section style="background: var(--bg-secondary);"><div class="container"><div class="cta-grand"><h2>Ready to <span style="color: #000;">Join</span> ELITE?</h2><p>Apply now for the 2026 batch and secure your seat!</p><div class="cta-buttons"><a href="admissions.html" class="btn btn-primary" style="background: #000; color: var(--gold);"><i class="fas fa-arrow-right"></i> Apply Now</a><button class="btn btn-outline" onclick="downloadBrochure()"><i class="fas fa-download"></i> Download Brochure</button><button class="btn btn-outline" onclick="openScheduleModal()"><i class="fas fa-calendar-alt"></i> Schedule Visit</button></div></div></div></section>
+
+  <!-- Schedule Campus Visit Modal -->
+  <div id="scheduleModal" class="schedule-modal"><div class="schedule-modal-content"><div class="schedule-modal-header"><h2><i class="fas fa-calendar-check"></i> Schedule Your Campus Visit</h2><span class="schedule-modal-close" onclick="closeScheduleModal()">&times;</span></div><div class="schedule-modal-body"><div class="visit-options"><div class="visit-option active" onclick="selectVisitType('physical')"><i class="fas fa-building"></i><h3>Physical Visit</h3><p>Visit our 120-acre campus</p></div><div class="visit-option" onclick="selectVisitType('virtual')"><i class="fas fa-video"></i><h3>Virtual Tour</h3><p>Interactive online tour</p></div></div><form id="scheduleForm" class="schedule-form"><div class="form-row"><div class="form-group"><label><i class="fas fa-user"></i> Full Name *</label><input type="text" id="visitName" required placeholder="Enter your full name"></div><div class="form-group"><label><i class="fas fa-envelope"></i> Email Address *</label><input type="email" id="visitEmail" required placeholder="your@email.com"></div></div><div class="form-row"><div class="form-group"><label><i class="fas fa-phone-alt"></i> Phone Number *</label><input type="tel" id="visitPhone" required placeholder="10-digit mobile number"></div><div class="form-group"><label><i class="fas fa-map-marker-alt"></i> City</label><input type="text" id="visitCity" placeholder="Your city"></div></div><div class="form-row"><div class="form-group"><label><i class="fas fa-calendar-day"></i> Preferred Date *</label><input type="date" id="visitDate" required></div><div class="form-group"><label><i class="fas fa-clock"></i> Preferred Time *</label><select id="visitTime" required><option value="">Select Time Slot</option><option value="10:00 AM">10:00 AM - 11:00 AM</option><option value="11:00 AM">11:00 AM - 12:00 PM</option><option value="12:00 PM">12:00 PM - 1:00 PM</option><option value="2:00 PM">2:00 PM - 3:00 PM</option><option value="3:00 PM">3:00 PM - 4:00 PM</option></select></div></div><div class="form-group"><label><i class="fas fa-graduation-cap"></i> Course Interested In *</label><select id="visitCourse" required><option value="">Select Course</option><option>B.E Computer Science & Engineering</option><option>B.E CSE (Cyber Security)</option><option>B.Tech AI & Data Science</option><option>B.E Electronics & Communication</option><option>B.E Electrical & Electronics</option><option>B.E Civil Engineering</option><option>B.Tech Biotechnology</option><option>MBA Finance & Marketing</option></select></div><input type="hidden" id="visitType" value="physical"><button type="submit" class="btn-submit"><i class="fas fa-calendar-check"></i> Confirm Your Visit</button><p class="form-note"><i class="fas fa-info-circle"></i> Our admission team will contact you within 24 hours.</p></form></div></div></div>
+</main>
+
+<!-- Footer -->
+<footer><div class="container"><div class="footer-grid"><div class="footer-col"><h4>ELITE Institute of Engineering</h4><p>Mambakkam – Medavakkam Main Road, Ponmar, Chennai, Tamil Nadu 600127</p><p><i class="fas fa-map-marker-alt"></i> Counselling Code: <strong style="color: var(--gold);">1442</strong></p><div class="social-icons"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><i class="fas fa-chevron-right"></i> <a href="admissions.html">Admissions 2026</a></li><li><i class="fas fa-chevron-right"></i> <a href="departments.html">Courses & Programmes</a></li><li><i class="fas fa-chevron-right"></i> <a href="placement.html">Placement Cell</a></li><li><i class="fas fa-chevron-right"></i> <a href="facilities.html">Research & Innovation</a></li></ul></div><div class="footer-col"><h4>Contact Info</h4><p><i class="fas fa-phone-alt"></i> Admissions: <a href="tel:+919047040413">+91 90470 40413</a></p><p><i class="fas fa-phone-alt"></i> Placement: <a href="tel:+919047040414">+91 90470 40414</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:admissions@elite.edu">admissions@elite.edu</a></p><p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5:30PM</p></div><div class="footer-col"><h4>Newsletter</h4><form id="newsletterForm" class="newsletter-form"><input type="email" placeholder="Your email address" required><button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Subscribe</button></form></div></div><div class="footer-bottom"><p>© 2026 ELITE Institute of Engineering. All rights reserved.</p></div></div></footer>
+
+<!-- AI Assistant -->
+<div class="ai-assistant"><div class="ai-fab" id="aiFab"><i class="fas fa-robot"></i></div><div class="ai-popup" id="aiPopup"><div class="ai-header"><span>ELITE AI Assistant</span><i class="fas fa-times" id="closeAiPopup"></i></div><div class="ai-messages" id="aiMessages"><div class="ai-msg ai-bot">Hello! Ask me about any department!</div></div><div class="ai-input-area"><input type="text" id="aiInput"><button id="aiSendBtn"><i class="fas fa-paper-plane"></i></button></div></div></div>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float" onclick="window.open('https://wa.me/919047040413', '_blank')"><i class="fab fa-whatsapp"></i></div>
+
+<!-- Back to Top -->
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<!-- JavaScript Files -->
+<script src="assets/js/utilities.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/ai-assistant.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// ============================================
+// DEPARTMENTS DATA - ENHANCED WITH DETAILS
+// ============================================
+
+const departments = [
+  { 
+    name: "Computer Science & Engineering", 
+    category: "engineering", 
+    img: "assets/images/jpg/Computer Engineering Course.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,35,000", 
+    seats: 120, 
+    placement: "95%", 
+    avgPackage: "₹12.5 LPA",
+    highestPackage: "₹52 LPA",
+    desc: "Comprehensive program covering software engineering, AI, cybersecurity, and full-stack development. Students gain hands-on experience with modern technologies and industry tools.",
+    highlights: ["AI/ML Specialization", "Cyber Security Track", "Microsoft Partnership", "Full Stack Development"],
+    curriculum: ["Data Structures & Algorithms", "Operating Systems", "Database Management Systems", "Computer Networks", "Artificial Intelligence", "Cloud Computing"],
+    labs: ["AI/ML Lab (NVIDIA GPUs)", "Cyber Security Lab", "Cloud Computing Lab", "Software Development Lab"],
+    careerPaths: ["Software Engineer", "Data Scientist", "Cloud Architect", "Security Analyst", "Full Stack Developer"],
+    hod: "Dr. Meena Krishnamurthy",
+    qualification: "Ph.D. (IIT Madras), 18+ years experience",
+    topRecruiters: ["Microsoft", "Google", "Amazon", "Infosys", "TCS"]
+  },
+  { 
+    name: "AI & Data Science", 
+    category: "engineering", 
+    img: "assets/images/jpg/AIDS.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,45,000", 
+    seats: 110, 
+    placement: "97%", 
+    avgPackage: "₹14.2 LPA",
+    highestPackage: "₹48 LPA",
+    desc: "Cutting-edge program in AI, machine learning, deep learning, and data engineering. Industry-aligned curriculum with hands-on projects and research opportunities.",
+    highlights: ["NVIDIA Partner", "Deep Learning Specialization", "Big Data Analytics", "Computer Vision"],
+    curriculum: ["Machine Learning", "Deep Learning", "Natural Language Processing", "Computer Vision", "Big Data Analytics", "Data Engineering"],
+    labs: ["NVIDIA AI Lab", "Data Analytics Lab", "Computer Vision Lab", "Big Data Lab"],
+    careerPaths: ["AI Engineer", "Data Scientist", "ML Engineer", "Business Intelligence Analyst", "Data Analyst"],
+    hod: "Dr. Priya Srinivasan",
+    qualification: "Ph.D. (Stanford), 15+ years experience",
+    topRecruiters: ["Amazon", "Google", "Microsoft", "Flipkart", "Deloitte"]
+  },
+  { 
+    name: "Cyber Security", 
+    category: "engineering", 
+    img: "assets/images/jpg/Cybersecurity.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,35,000", 
+    seats: 120, 
+    placement: "94%", 
+    avgPackage: "₹11.8 LPA",
+    highestPackage: "₹28 LPA",
+    desc: "Specialized program in ethical hacking, digital forensics, and network security. Students learn to protect organizations from cyber threats.",
+    highlights: ["Ethical Hacking", "Digital Forensics", "Cisco Partnership", "Security Operations"],
+    curriculum: ["Ethical Hacking", "Digital Forensics", "Cryptography", "Network Security", "Incident Response", "Security Operations"],
+    labs: ["Cyber Range", "Forensics Lab", "Network Security Lab", "Penetration Testing Lab"],
+    careerPaths: ["Security Analyst", "Penetration Tester", "Security Consultant", "Forensics Expert", "CISO"],
+    hod: "Dr. Rajesh Kumar",
+    qualification: "Ph.D. (Anna University), 14+ years experience",
+    topRecruiters: ["Cisco", "IBM", "Deloitte", "TCS", "Wipro"]
+  },
+  { 
+    name: "Information Technology", 
+    category: "engineering", 
+    img: "assets/images/jpg/it.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,35,000", 
+    seats: 100, 
+    placement: "96%", 
+    avgPackage: "₹12.8 LPA",
+    highestPackage: "₹42 LPA",
+    desc: "Focus on cloud computing, web technologies, and software engineering. Students build scalable applications and learn modern development practices.",
+    highlights: ["Cloud Computing", "Web Technologies", "AWS Partnership", "DevOps"],
+    curriculum: ["Web Development", "Cloud Computing", "DevOps", "Software Testing", "Mobile App Development", "Database Management"],
+    labs: ["Cloud Lab (AWS)", "Web Dev Lab", "Mobile Dev Lab", "DevOps Lab"],
+    careerPaths: ["Software Developer", "Cloud Engineer", "DevOps Engineer", "Web Developer", "IT Consultant"],
+    hod: "Dr. Anand Natarajan",
+    qualification: "Ph.D. (IIT Bombay), 16+ years experience",
+    topRecruiters: ["Amazon", "Google", "Infosys", "Accenture", "IBM"]
+  },
+  { 
+    name: "Electronics & Communication", 
+    category: "engineering", 
+    img: "assets/images/jpg/ECE.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,32,000", 
+    seats: 100, 
+    placement: "93%", 
+    avgPackage: "₹10.2 LPA",
+    highestPackage: "₹28 LPA",
+    desc: "Advanced program in VLSI design, embedded systems, and IoT. Students design and develop cutting-edge electronic systems.",
+    highlights: ["VLSI Design", "Embedded Systems", "IoT", "Robotics"],
+    curriculum: ["VLSI Design", "Embedded Systems", "IoT", "Signal Processing", "Communication Systems", "Robotics"],
+    labs: ["VLSI Lab (Cadence)", "Embedded Lab", "IoT Lab", "Robotics Lab"],
+    careerPaths: ["VLSI Engineer", "Embedded Engineer", "IoT Specialist", "Electronics Engineer", "Robotics Engineer"],
+    hod: "Dr. Lakshmi Narayanan",
+    qualification: "Ph.D. (IIT Delhi), 18+ years experience",
+    topRecruiters: ["Intel", "Texas Instruments", "Samsung", "Bosch", "Qualcomm"]
+  },
+  { 
+    name: "Electrical & Electronics", 
+    category: "engineering", 
+    img: "assets/images/jpg/EEE.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,30,000", 
+    seats: 90, 
+    placement: "92%", 
+    avgPackage: "₹9.5 LPA",
+    highestPackage: "₹22 LPA",
+    desc: "Focus on power systems, renewable energy, and electric vehicles. Students work on sustainable energy solutions.",
+    highlights: ["Power Systems", "Renewable Energy", "Electric Vehicles", "Smart Grid"],
+    curriculum: ["Power Systems", "Renewable Energy", "Electric Vehicles", "Control Systems", "Power Electronics", "Smart Grid"],
+    labs: ["Power Lab", "Renewable Energy Lab", "EV Lab", "Control Systems Lab"],
+    careerPaths: ["Power Engineer", "Renewable Energy Specialist", "EV Engineer", "Grid Analyst", "Control Engineer"],
+    hod: "Dr. Suresh Kumar",
+    qualification: "Ph.D. (IIT Roorkee), 17+ years experience",
+    topRecruiters: ["Siemens", "ABB", "Tata Power", "BHEL", "Schneider Electric"]
+  },
+  { 
+    name: "Civil Engineering", 
+    category: "engineering", 
+    img: "assets/images/jpg/civil.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,20,000", 
+    seats: 90, 
+    placement: "88%", 
+    avgPackage: "₹8.5 LPA",
+    highestPackage: "₹18 LPA",
+    desc: "Comprehensive civil engineering with focus on structural design, smart cities, and sustainable construction.",
+    highlights: ["Structural Design", "Smart Cities", "Sustainable Construction", "L&T Partnership"],
+    curriculum: ["Structural Design", "Construction Management", "Smart Cities", "Transportation Engineering", "Environmental Engineering", "Geotechnical Engineering"],
+    labs: ["Structural Lab", "Geotech Lab", "Transport Lab", "Environmental Lab"],
+    careerPaths: ["Structural Engineer", "Construction Manager", "Urban Planner", "Transportation Engineer", "Environmental Consultant"],
+    hod: "Dr. Suresh Babu",
+    qualification: "Ph.D. (IIT Madras), 20+ years experience",
+    topRecruiters: ["L&T", "Shapoorji", "Gammon", "Prestige", "Sobha"]
+  },
+  { 
+    name: "Biotechnology", 
+    category: "science", 
+    img: "assets/images/jpg/BioTechnology.jpg", 
+    duration: "4 Years", 
+    fee: "₹1,25,000", 
+    seats: 70, 
+    placement: "89%", 
+    avgPackage: "₹9.2 LPA",
+    highestPackage: "₹16 LPA",
+    desc: "Interdisciplinary program in genetic engineering, bioinformatics, and pharmaceutical research.",
+    highlights: ["Genetic Engineering", "Bioinformatics", "Biocon Partnership", "Pharmaceutical Research"],
+    curriculum: ["Genetic Engineering", "Bioinformatics", "Molecular Biology", "Bioprocess Technology", "Pharmaceutical Research", "Bioprocess Engineering"],
+    labs: ["Genetic Engineering Lab", "Bioinformatics Lab", "Bioprocess Lab", "Molecular Biology Lab"],
+    careerPaths: ["Biotech Researcher", "Bioinformatician", "Pharmaceutical Scientist", "Quality Control Analyst", "Clinical Researcher"],
+    hod: "Dr. Deepa Mohan",
+    qualification: "Ph.D. (University of Cambridge), 14+ years experience",
+    topRecruiters: ["Biocon", "Novozymes", "GlaxoSmithKline", "Pfizer", "Dr. Reddy's"]
+  },
+  { 
+    name: "MBA (Finance & Marketing)", 
+    category: "management", 
+    img: "assets/images/jpg/mba-spcialization.jpg", 
+    duration: "2 Years", 
+    fee: "₹2,40,000", 
+    seats: 80, 
+    placement: "94%", 
+    avgPackage: "₹15.5 LPA",
+    highestPackage: "₹32 LPA",
+    desc: "Comprehensive MBA with dual specialization in Finance and Marketing. Industry-ready curriculum with case studies and live projects.",
+    highlights: ["Dual Specialization", "Leadership Development", "Deloitte Partnership", "Industry Mentorship"],
+    curriculum: ["Financial Analytics", "Strategic Marketing", "Business Analytics", "HR Management", "Operations Management", "Leadership"],
+    labs: ["Finance Lab (Bloomberg)", "Marketing Lab", "Analytics Lab", "Business Simulation Lab"],
+    careerPaths: ["Investment Banker", "Marketing Manager", "Business Analyst", "Consultant", "Product Manager"],
+    hod: "Prof. Kavitha Rajan",
+    qualification: "MBA (Harvard), 22+ years industry experience",
+    topRecruiters: ["Deloitte", "KPMG", "Goldman Sachs", "McKinsey", "Amazon"]
+  }
+];
+
+let currentFilter = "all";
+let currentSearch = "";
+
+// Render Departments with Enhanced Details
+function renderDepartments() {
+  const filtered = departments.filter(d => 
+    (currentFilter === "all" || d.category === currentFilter) && 
+    (d.name.toLowerCase().includes(currentSearch) || 
+     d.desc.toLowerCase().includes(currentSearch) ||
+     d.highlights.some(h => h.toLowerCase().includes(currentSearch)))
+  );
+  
+  const grid = document.getElementById('departmentsGrid');
+  if (!grid) return;
+  
+  if (filtered.length === 0) { 
+    grid.innerHTML = `<div class="no-results"><i class="fas fa-search"></i><h3>No departments found</h3><p>Try adjusting your search or filter criteria</p><button class="btn btn-outline" onclick="resetFilters()">Reset Filters</button></div>`; 
+    return; 
+  }
+  
+  grid.innerHTML = filtered.map((d, index) => `
+    <div class="dept-card-enhanced" data-dept-id="${index}">
+      <div class="dept-card-inner">
+        <div class="dept-image-section">
+          <img src="${d.img}" alt="${d.name}" loading="lazy" onerror="this.src='assets/images/jpg/logo.jpg'">
+          <div class="dept-badges">
+            <span class="dept-badge placement-badge"><i class="fas fa-chart-line"></i> ${d.placement} Placed</span>
+            <span class="dept-badge duration-badge"><i class="fas fa-clock"></i> ${d.duration}</span>
+          </div>
+        </div>
+        
+        <div class="dept-content-section">
+          <h3 class="dept-title">${d.name}</h3>
+          <p class="dept-description">${d.desc.substring(0, 120)}...</p>
+          
+          <div class="dept-quick-stats">
+            <div class="stat-item-mini">
+              <i class="fas fa-rupee-sign"></i>
+              <div><strong>${d.fee}</strong><span>/year</span></div>
+            </div>
+            <div class="stat-item-mini">
+              <i class="fas fa-users"></i>
+              <div><strong>${d.seats}</strong><span>Seats</span></div>
+            </div>
+            <div class="stat-item-mini">
+              <i class="fas fa-chart-line"></i>
+              <div><strong>${d.avgPackage}</strong><span>Avg Package</span></div>
+            </div>
+            <div class="stat-item-mini">
+              <i class="fas fa-trophy"></i>
+              <div><strong>${d.highestPackage}</strong><span>Highest</span></div>
+            </div>
+          </div>
+          
+          <div class="dept-highlights">
+            ${d.highlights.slice(0, 3).map(h => `<span class="highlight-tag"><i class="fas fa-star"></i> ${h}</span>`).join('')}
+          </div>
+          
+          <div class="dept-actions">
+            <button class="btn btn-primary btn-sm" onclick="showDeptDetails('${d.name.replace(/'/g, "\\'")}')">
+              <i class="fas fa-info-circle"></i> View Full Details
+            </button>
+            <a href="admissions.html" class="btn btn-outline btn-sm">
+              <i class="fas fa-arrow-right"></i> Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// Show Detailed Department Modal
+function showDeptDetails(name) {
+  const d = departments.find(x => x.name === name);
+  if (!d) return;
+  
+  const modal = document.createElement('div');
+  modal.className = 'dept-detail-modal';
+  modal.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; display:flex; align-items:center; justify-content:center; overflow-y:auto; padding:20px;';
+  
+  modal.innerHTML = `
+    <div class="dept-modal-container" style="background:var(--bg-secondary); border-radius:28px; width:100%; max-width:850px; max-height:85vh; overflow-y:auto; animation:modalSlideIn 0.3s ease;">
+      <div class="dept-modal-header" style="background:var(--gradient-gold); padding:1rem 1.5rem; border-radius:28px 28px 0 0; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10;">
+        <div>
+          <h2 style="margin:0; font-size:1.2rem; color:#000;">${d.name}</h2>
+          <p style="margin:3px 0 0; font-size:0.75rem; color:rgba(0,0,0,0.7);"><i class="fas fa-clock"></i> ${d.duration} | <i class="fas fa-users"></i> ${d.seats} Seats</p>
+        </div>
+        <span class="modal-close" data-close="modal" style="font-size:1.8rem; cursor:pointer; color:#000; line-height:1;">&times;</span>
+      </div>
+      
+      <div class="dept-modal-body" style="padding:1.2rem;">
+        <!-- Smaller Image -->
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <img src="${d.img}" alt="${d.name}" style="width: 180px; height: 180px; object-fit: cover; border-radius: 16px; border: 2px solid var(--gold);" onerror="this.src='assets/images/jpg/logo.jpg'">
+        </div>
+        
+        <!-- Description -->
+        <div class="detail-section" style="margin-bottom:1rem;">
+          <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--gold);"><i class="fas fa-info-circle"></i> About the Program</h3>
+          <p style="font-size:0.85rem; line-height:1.5;">${d.desc}</p>
+        </div>
+        
+        <!-- Quick Info Grid -->
+        <div class="detail-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.8rem; margin-bottom:1rem;">
+          <div class="info-card" style="background:rgba(212,175,55,0.1); padding:0.6rem; border-radius:12px; text-align:center;">
+            <i class="fas fa-rupee-sign" style="color:var(--gold); font-size:0.9rem;"></i>
+            <div style="font-size:0.7rem; color:var(--text-muted);">Annual Fee</div>
+            <strong style="font-size:0.85rem; display:block;">${d.fee}</strong>
+          </div>
+          <div class="info-card" style="background:rgba(212,175,55,0.1); padding:0.6rem; border-radius:12px; text-align:center;">
+            <i class="fas fa-chart-line" style="color:var(--gold); font-size:0.9rem;"></i>
+            <div style="font-size:0.7rem; color:var(--text-muted);">Placement</div>
+            <strong style="font-size:0.85rem; display:block;">${d.placement}</strong>
+          </div>
+          <div class="info-card" style="background:rgba(212,175,55,0.1); padding:0.6rem; border-radius:12px; text-align:center;">
+            <i class="fas fa-trophy" style="color:var(--gold); font-size:0.9rem;"></i>
+            <div style="font-size:0.7rem; color:var(--text-muted);">Highest</div>
+            <strong style="font-size:0.85rem; display:block;">${d.highestPackage}</strong>
+          </div>
+          <div class="info-card" style="background:rgba(212,175,55,0.1); padding:0.6rem; border-radius:12px; text-align:center;">
+            <i class="fas fa-chart-simple" style="color:var(--gold); font-size:0.9rem;"></i>
+            <div style="font-size:0.7rem; color:var(--text-muted);">Average</div>
+            <strong style="font-size:0.85rem; display:block;">${d.avgPackage}</strong>
+          </div>
+        </div>
+        
+        <!-- Curriculum -->
+        <div class="detail-section" style="margin-bottom:1rem;">
+          <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--gold);"><i class="fas fa-book-open"></i> Curriculum Highlights</h3>
+          <div class="curriculum-list" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            ${d.curriculum.map(c => `<span style="background:rgba(212,175,55,0.1); padding:3px 10px; border-radius:20px; font-size:0.7rem;"><i class="fas fa-check-circle" style="color:var(--gold); font-size:0.6rem;"></i> ${c}</span>`).join('')}
+          </div>
+        </div>
+        
+        <!-- Labs -->
+        <div class="detail-section" style="margin-bottom:1rem;">
+          <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--gold);"><i class="fas fa-flask"></i> Laboratories</h3>
+          <div class="labs-list" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            ${d.labs.map(l => `<span style="background:rgba(212,175,55,0.1); padding:3px 10px; border-radius:20px; font-size:0.7rem;"><i class="fas fa-microscope" style="color:var(--gold); font-size:0.6rem;"></i> ${l}</span>`).join('')}
+          </div>
+        </div>
+        
+        <!-- Career Paths -->
+        <div class="detail-section" style="margin-bottom:1rem;">
+          <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--gold);"><i class="fas fa-briefcase"></i> Career Opportunities</h3>
+          <div class="career-list" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            ${d.careerPaths.map(c => `<span style="background:rgba(212,175,55,0.1); padding:3px 10px; border-radius:20px; font-size:0.7rem;"><i class="fas fa-user-graduate" style="color:var(--gold); font-size:0.6rem;"></i> ${c}</span>`).join('')}
+          </div>
+        </div>
+        
+        <!-- Top Recruiters -->
+        <div class="detail-section" style="margin-bottom:1rem;">
+          <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--gold);"><i class="fas fa-building"></i> Top Recruiters</h3>
+          <div class="recruiters-list" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            ${d.topRecruiters.map(r => `<span style="background:rgba(212,175,55,0.1); padding:3px 10px; border-radius:20px; font-size:0.7rem;"><i class="fas fa-industry" style="color:var(--gold); font-size:0.6rem;"></i> ${r}</span>`).join('')}
+          </div>
+        </div>
+        
+        <!-- HOD Info -->
+        <div class="detail-section" style="background:rgba(212,175,55,0.05); padding:0.8rem; border-radius:12px; margin-bottom:1rem;">
+          <h3 style="font-size:0.9rem; margin-bottom:0.3rem; color:var(--gold);"><i class="fas fa-user-tie"></i> Department Head</h3>
+          <p style="font-size:0.8rem; margin:0;"><strong>${d.hod}</strong><br><span style="font-size:0.7rem; color:var(--text-muted);">${d.qualification}</span></p>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="dept-modal-actions" style="display:flex; gap:0.8rem; margin-top:1rem; flex-wrap:wrap;">
+          <a href="admissions.html#wowAdmissionForm" class="btn btn-primary" style="flex:1; text-align:center; padding:10px; font-size:0.85rem;"><i class="fas fa-arrow-right"></i> Apply Now</a>
+          <button class="btn btn-outline close-modal-btn" data-close="modal" style="flex:1; text-align:center; padding:10px; font-size:0.85rem;"><i class="fas fa-times"></i> Close</button>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  
+  // Disable scrolling on body
+  document.body.style.overflow = 'hidden';
+  
+  // Function to close modal and restore scrolling
+  function closeModalAndRestoreScroll() {
+    if (modal && modal.parentNode) {
+      modal.remove();
+    }
+    document.body.style.overflow = '';
+  }
+  
+  // Add click event to all close buttons (X icon and Close button)
+  const closeButtons = modal.querySelectorAll('[data-close="modal"]');
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', closeModalAndRestoreScroll);
+  });
+  
+  // Close modal when clicking outside the modal content
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModalAndRestoreScroll();
+    }
+  });
+  
+  // Close modal on Escape key
+  function handleEscKey(e) {
+    if (e.key === 'Escape') {
+      closeModalAndRestoreScroll();
+      document.removeEventListener('keydown', handleEscKey);
+    }
+  }
+  document.addEventListener('keydown', handleEscKey);
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => { 
+  btn.addEventListener('click', () => { 
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); 
+    btn.classList.add('active'); 
+    currentFilter = btn.dataset.filter; 
+    renderDepartments(); 
+  }); 
+});
+
+// Counters Animation
+const counterObserver = new IntersectionObserver((entries) => { 
+  entries.forEach(entry => { 
+    if (entry.isIntersecting) { 
+      const el = entry.target; 
+      const target = parseInt(el.dataset.count); 
+      let curr = 0; 
+      const step = Math.ceil(target / 40); 
+      const intv = setInterval(() => { 
+        curr += step; 
+        if (curr >= target) { 
+          el.innerText = target + (el.dataset.count.includes('+') ? '+' : ''); 
+          clearInterval(intv); 
+        } else { 
+          el.innerText = curr; 
+        } 
+      }, 25); 
+      counterObserver.unobserve(el); 
+    } 
+  }); 
+}, { threshold: 0.3 });
+
+document.querySelectorAll('[data-count]').forEach(c => counterObserver.observe(c));
+
+// Newsletter
+document.getElementById('newsletterForm')?.addEventListener('submit', (e) => { 
+  e.preventDefault(); 
+  notifySuccess('✓ Thank you for subscribing!'); 
+  e.target.reset(); 
+});
+
+// Initialize
+renderDepartments();
+</script>
+</body>
+</html>

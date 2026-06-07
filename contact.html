@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Contact Us | ELITE Institute of Engineering | Get in Touch</title>
+  <meta name="description" content="Contact ELITE Institute of Engineering - Admissions, Placement Cell, Examination Cell. Get address, phone numbers, email, and send enquiries.">
+  <meta name="keywords" content="contact ELITE, admissions contact, placement contact, college address, phone numbers, email">
+  <link rel="icon" type="image/jpeg" href="assets/images/jpg/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* Additional styles for enhanced contact page */
+    .contact-form-premium {
+      background: var(--card-bg);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-form-premium:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .form-header-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--gradient-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.8rem;
+      color: #000;
+      box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    }
+    .form-header h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-family: 'Cinzel', serif;
+    }
+    .premium-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 0;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 16px 16px 8px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 16px;
+      background: var(--input-bg);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    .input-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .input-group label {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: transparent;
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .input-group.textarea-group label {
+      top: 18px;
+      transform: translateY(0);
+    }
+    .input-group label i {
+      color: var(--gold);
+    }
+    .input-group input:focus ~ label,
+    .input-group input:not(:placeholder-shown) ~ label,
+    .input-group select:focus ~ label,
+    .input-group select:not([value=""]) ~ label,
+    .input-group textarea:focus ~ label,
+    .input-group textarea:not(:placeholder-shown) ~ label {
+      top: -10px;
+      left: 12px;
+      font-size: 0.7rem;
+      background: var(--card-bg);
+      padding: 0 8px;
+      color: var(--gold);
+    }
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    }
+    .submit-btn-modern {
+      background: var(--gradient-gold);
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .submit-btn-modern:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+    .form-status-modern {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    .form-status-modern.success {
+      background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(39, 174, 96, 0.05));
+      border: 1px solid rgba(39, 174, 96, 0.3);
+      color: #27ae60;
+    }
+    .form-status-modern.error {
+      background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(231, 76, 60, 0.05));
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      color: #e74c3c;
+    }
+    @media (max-width: 768px) {
+      .contact-form-premium { padding: 1.5rem; }
+      .form-header-icon { width: 55px; height: 55px; font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- Counselling Bar -->
+<div class="counselling-bar">
+  <div class="container">
+    <span><i class="fas fa-code"></i> <strong>TNEA Counselling Code: 1442</strong> | <i class="fas fa-calendar-alt"></i> Admissions Open 2026</span>
+    <span><i class="fas fa-phone-alt"></i> Helpline: +91 90470 40413 | <i class="fas fa-envelope"></i> admissions@elite.edu</span>
+    <span class="highlight"><i class="fas fa-graduation-cap"></i> Limited Seats - Apply Now!</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="assets/images/jpg/logo.jpg" alt="ELITE Logo" class="logo-img" onerror="this.src='https://placehold.co/55x55/D4AF37/000?text=E'">
+      <div class="logo-text">ELITE<br><span>INSTITUTE OF ENGINEERING</span></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+      <li><a href="departments.html" class="nav-link">Departments</a></li>
+      <li><a href="placement.html" class="nav-link">Placements</a></li>
+      <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-sun"></i> Light</button>
+      <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section class="page-hero" style="background-image: url('assets/images/jpg/campus.jpg');">
+    <div class="container hero-content text-center">
+      <div class="hero-badge"><i class="fas fa-phone-alt"></i> GET IN TOUCH</div>
+      <h1 class="hero-title">Contact <span class="gradient-gold">ELITE</span></h1>
+      <p class="hero-subtitle">We're here to answer your questions and guide you</p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <div class="contact-info-section">
+    <div class="container">
+      <div class="contact-cards-grid">
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><h3>Visit Us</h3><p>Mambakkam – Medavakkam Main Road</p><p>Ponmar, Chennai</p><p>Tamil Nadu 600127</p><p class="gold-text" style="margin-top: 0.8rem;"><i class="fas fa-code"></i> Counselling Code: <strong>1442</strong></p></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><h3>Call Us</h3><p><strong>Admissions:</strong> <a href="tel:+919047040413">+91 90470 40413</a></p><p><strong>Placement Cell:</strong> <a href="tel:+919047040414">+91 90470 40414</a></p><p><strong>Examination:</strong> <a href="tel:+919047040415">+91 90470 40415</a></p><p><strong>Fax:</strong> 044-2745 6789</p></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><h3>Email Us</h3><p><strong>Admissions:</strong> <a href="mailto:admissions@elite.edu">admissions@elite.edu</a></p><p><strong>Placements:</strong> <a href="mailto:placement@elite.edu">placement@elite.edu</a></p><p><strong>Examinations:</strong> <a href="mailto:exams@elite.edu">exams@elite.edu</a></p><p><strong>General:</strong> <a href="mailto:info@elite.edu">info@elite.edu</a></p></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><h3>WhatsApp Support</h3><p><strong>Admission Enquiries</strong></p><p><a href="https://wa.me/919047040413">+91 90470 40413</a></p><button class="btn btn-primary btn-sm" style="margin-top: 0.8rem; background: #25D366; border-color: #25D366;" onclick="window.open('https://wa.me/919047040413','_blank')"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Department Contacts -->
+  <div class="dept-contacts-section">
+    <div class="container">
+      <div class="section-header"><div class="section-badge">DEPARTMENTS</div><h2 class="section-title">Direct <span class="gold-text">Department</span> Contacts</h2><p class="section-subtitle">Reach out directly to specific departments</p></div>
+      <div class="dept-contacts-grid">
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-laptop-code"></i></div><div class="dept-info"><h4>Computer Science</h4><p><a href="mailto:cse@elite.edu">cse@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-brain"></i></div><div class="dept-info"><h4>AI & Data Science</h4><p><a href="mailto:ai@elite.edu">ai@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-shield-alt"></i></div><div class="dept-info"><h4>Cyber Security</h4><p><a href="mailto:cyber@elite.edu">cyber@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-microchip"></i></div><div class="dept-info"><h4>Electronics & Comm</h4><p><a href="mailto:ece@elite.edu">ece@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-bolt"></i></div><div class="dept-info"><h4>Electrical & Electronics</h4><p><a href="mailto:eee@elite.edu">eee@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-hard-hat"></i></div><div class="dept-info"><h4>Civil Engineering</h4><p><a href="mailto:civil@elite.edu">civil@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-dna"></i></div><div class="dept-info"><h4>Biotechnology</h4><p><a href="mailto:biotech@elite.edu">biotech@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-chart-line"></i></div><div class="dept-info"><h4>MBA</h4><p><a href="mailto:mba@elite.edu">mba@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-book"></i></div><div class="dept-info"><h4>Library</h4><p><a href="mailto:library@elite.edu">library@elite.edu</a></p></div></div>
+        <div class="dept-contact-card"><div class="dept-icon"><i class="fas fa-handshake"></i></div><div class="dept-info"><h4>Placement Cell</h4><p><a href="mailto:placement@elite.edu">placement@elite.edu</a></p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENHANCED MAP AND CONTACT FORM SECTION -->
+  <div class="map-form-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-map-marked-alt"></i> FIND US</div>
+        <h2 class="section-title">Our <span class="gold-text">Location</span></h2>
+        <p class="section-subtitle">Visit our sprawling 120-acre campus in the heart of Chennai's educational corridor</p>
+      </div>
+
+      <div class="map-form-grid premium-layout">
+        <!-- Enhanced Map Container -->
+        <div class="map-container-premium reveal">
+          <div class="map-wrapper">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.914248551511!2d80.19942707507537!3d12.990414287316825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52678f0d0d4b9f%3A0x2a7b8c9d5e6f7a8b!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="ELITE Institute Campus Location">
+            </iframe>
+          </div>
+          
+          <!-- Map Controls -->
+          <div class="map-controls">
+            <button class="map-control-btn" onclick="openFullscreenMap()" title="View Fullscreen">
+              <i class="fas fa-expand"></i>
+            </button>
+            <button class="map-control-btn" onclick="getDirections()" title="Get Directions">
+              <i class="fas fa-directions"></i>
+            </button>
+            <button class="map-control-btn" onclick="shareLocation()" title="Share Location">
+              <i class="fas fa-share-alt"></i>
+            </button>
+          </div>
+          
+          <div class="map-badge">
+            <i class="fas fa-map-pin"></i>
+            <span>Main Campus • 120 Acres</span>
+          </div>
+        </div>
+
+        <!-- Premium Contact Form -->
+        <div class="contact-form-premium reveal">
+          <div class="form-header">
+            <div class="form-header-icon">
+              <i class="fas fa-paper-plane"></i>
+            </div>
+            <h3>Send Us a Message</h3>
+            <p>We'd love to hear from you. Fill the form below and we'll respond within 24 hours.</p>
+          </div>
+
+          <form id="contactForm" class="premium-form">
+            <div class="input-group">
+              <input type="text" id="contactName" placeholder=" " required>
+              <label><i class="fas fa-user"></i> Full Name *</label>
+            </div>
+            
+            <div class="input-group">
+              <input type="email" id="contactEmail" placeholder=" " required>
+              <label><i class="fas fa-envelope"></i> Email Address *</label>
+            </div>
+            
+            <div class="input-group">
+              <input type="tel" id="contactPhone" placeholder=" ">
+              <label><i class="fas fa-phone-alt"></i> Phone Number</label>
+            </div>
+            
+            <div class="input-group">
+              <select id="contactSubject">
+                <option value="" disabled selected></option>
+                <option value="admission">📘 Admission Enquiry</option>
+                <option value="course">🎓 Course Information</option>
+                <option value="placement">💼 Placement Related</option>
+                <option value="scholarship">🏆 Scholarship Query</option>
+                <option value="general">💬 General Query</option>
+                <option value="complaint">⚠️ Complaint/Suggestion</option>
+              </select>
+              <label><i class="fas fa-tag"></i> Subject</label>
+            </div>
+            
+            <div class="input-group textarea-group">
+              <textarea id="contactMessage" rows="5" placeholder=" " required></textarea>
+              <label><i class="fas fa-comment-dots"></i> Your Message *</label>
+            </div>
+
+            <button type="submit" class="submit-btn-modern">
+              <span>Send Message</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <div id="contactFormStatus" class="form-status-modern" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Location Info Cards -->
+      <div class="location-info-grid reveal">
+        <div class="info-card-premium">
+          <div class="info-icon"><i class="fas fa-train"></i></div>
+          <div class="info-content">
+            <h4>Nearest Railway Station</h4>
+            <p>Tambaram Railway Station - 12 km</p>
+            <small><i class="fas fa-clock"></i> 25 mins drive</small>
+          </div>
+        </div>
+        <div class="info-card-premium">
+          <div class="info-icon"><i class="fas fa-bus"></i></div>
+          <div class="info-content">
+            <h4>Nearest Bus Stop</h4>
+            <p>Ponmar Bus Stand - 500 m</p>
+            <small><i class="fas fa-clock"></i> 5 mins walk</small>
+          </div>
+        </div>
+        <div class="info-card-premium">
+          <div class="info-icon"><i class="fas fa-plane"></i></div>
+          <div class="info-content">
+            <h4>Nearest Airport</h4>
+            <p>Chennai International Airport (MAA) - 25 km</p>
+            <small><i class="fas fa-clock"></i> 45 mins drive</small>
+          </div>
+        </div>
+        <div class="info-card-premium">
+          <div class="info-icon"><i class="fas fa-taxi"></i></div>
+          <div class="info-content">
+            <h4>Transport Options</h4>
+            <p>Ola/Uber available 24/7</p>
+            <small><i class="fas fa-check-circle"></i> Easy connectivity</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Office Hours -->
+  <div class="office-hours">
+    <div class="container">
+      <div class="section-header"><div class="section-badge">WORKING HOURS</div><h2 class="section-title">Office <span class="gold-text">Hours</span></h2></div>
+      <div class="hours-grid">
+        <div class="hours-card"><i class="fas fa-building"></i><h4>Admission Office</h4><p>Mon-Fri: 9:00 AM - 5:30 PM</p><p>Sat: 9:00 AM - 1:00 PM</p><p>Sun: Closed</p></div>
+        <div class="hours-card"><i class="fas fa-book"></i><h4>Library Hours</h4><p>Mon-Sat: 8:00 AM - 10:00 PM</p><p>Sun: 10:00 AM - 6:00 PM</p><p>Exam Time: 24/7</p></div>
+        <div class="hours-card"><i class="fas fa-bed"></i><h4>Hostel Office</h4><p>Mon-Sat: 9:00 AM - 6:00 PM</p><p>24/7 Warden Available</p></div>
+        <div class="hours-card"><i class="fas fa-id-card"></i><h4>Examination Branch</h4><p>Mon-Fri: 9:30 AM - 5:00 PM</p><p>Sat: 9:30 AM - 1:00 PM</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emergency Contacts -->
+  <div class="emergency-section">
+    <div class="container">
+      <div class="emergency-grid">
+        <div class="emergency-card"><i class="fas fa-shield-alt"></i><h4>Security Control</h4><p><a href="tel:+919047040499">+91 90470 40499</a></p><p>24/7 Available</p></div>
+        <div class="emergency-card"><i class="fas fa-ambulance"></i><h4>Medical Emergency</h4><p><a href="tel:+919047040488">+91 90470 40488</a></p><p>24/7 Ambulance</p></div>
+        <div class="emergency-card"><i class="fas fa-female"></i><h4>Women's Helpline</h4><p><a href="tel:+919047040477">+91 90470 40477</a></p><p>24/7 Support</p></div>
+        <div class="emergency-card"><i class="fas fa-gavel"></i><h4>Anti-Ragging</h4><p><a href="tel:+919047040466">+91 90470 40466</a></p><p>24/7 Helpline</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="cta-grand">
+        <h2>Plan Your <span style="color: #000;">Visit</span> to ELITE Campus</h2>
+        <p>Experience our world-class infrastructure and vibrant campus life firsthand!</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" onclick="openScheduleModal()"><i class="fas fa-calendar-alt"></i> Schedule Campus Visit</button>
+          <a href="#" class="btn btn-outline" onclick="getDirections()"><i class="fas fa-directions"></i> Get Directions</a>
+          <a href="admissions.html" class="btn btn-outline" style="background: #000; color: var(--gold);"><i class="fas fa-arrow-right"></i> Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Campus Visit Modal -->
+  <div id="scheduleModal" class="schedule-modal">
+    <div class="schedule-modal-content">
+      <div class="schedule-modal-header"><h2><i class="fas fa-calendar-check"></i> Schedule Your Campus Visit</h2><span class="schedule-modal-close" onclick="closeScheduleModal()">&times;</span></div>
+      <div class="schedule-modal-body">
+        <div class="visit-options"><div class="visit-option active" onclick="selectVisitType('physical')"><i class="fas fa-building"></i><h3>Physical Visit</h3><p>Visit our 120-acre campus</p></div><div class="visit-option" onclick="selectVisitType('virtual')"><i class="fas fa-video"></i><h3>Virtual Tour</h3><p>Interactive online tour</p></div></div>
+        <form id="scheduleForm" class="schedule-form">
+          <div class="form-row"><div class="form-group"><label><i class="fas fa-user"></i> Full Name *</label><input type="text" id="visitName" required placeholder="Enter your full name"></div><div class="form-group"><label><i class="fas fa-envelope"></i> Email Address *</label><input type="email" id="visitEmail" required placeholder="your@email.com"></div></div>
+          <div class="form-row"><div class="form-group"><label><i class="fas fa-phone-alt"></i> Phone Number *</label><input type="tel" id="visitPhone" required placeholder="10-digit mobile number"></div><div class="form-group"><label><i class="fas fa-map-marker-alt"></i> City</label><input type="text" id="visitCity" placeholder="Your city"></div></div>
+          <div class="form-row"><div class="form-group"><label><i class="fas fa-calendar-day"></i> Preferred Date *</label><input type="date" id="visitDate" required></div><div class="form-group"><label><i class="fas fa-clock"></i> Preferred Time *</label><select id="visitTime" required><option value="">Select Time Slot</option><option value="10:00 AM">10:00 AM - 11:00 AM</option><option value="11:00 AM">11:00 AM - 12:00 PM</option><option value="12:00 PM">12:00 PM - 1:00 PM</option><option value="2:00 PM">2:00 PM - 3:00 PM</option><option value="3:00 PM">3:00 PM - 4:00 PM</option></select></div></div>
+          <div class="form-group"><label><i class="fas fa-graduation-cap"></i> Course Interested In *</label><select id="visitCourse" required><option value="">Select Course</option><option>B.E Computer Science & Engineering</option><option>B.E CSE (Cyber Security)</option><option>B.Tech AI & Data Science</option><option>B.E Electronics & Communication</option><option>B.E Electrical & Electronics</option><option>B.E Civil Engineering</option><option>B.Tech Biotechnology</option><option>MBA Finance & Marketing</option></select></div>
+          <input type="hidden" id="visitType" value="physical">
+          <button type="submit" class="btn-submit"><i class="fas fa-calendar-check"></i> Confirm Your Visit</button>
+          <p class="form-note"><i class="fas fa-info-circle"></i> Our admission team will contact you within 24 hours to confirm your slot.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>ELITE Institute of Engineering</h4><p>Mambakkam – Medavakkam Main Road, Ponmar, Chennai, Tamil Nadu 600127</p><p><i class="fas fa-map-marker-alt"></i> Counselling Code: <strong style="color: var(--gold);">1442</strong></p><div class="social-icons"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><i class="fas fa-chevron-right"></i> <a href="admissions.html">Admissions 2026</a></li><li><i class="fas fa-chevron-right"></i> <a href="departments.html">Courses & Programmes</a></li><li><i class="fas fa-chevron-right"></i> <a href="placement.html">Placement Cell</a></li><li><i class="fas fa-chevron-right"></i> <a href="facilities.html">Research & Innovation</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Info</h4><p><i class="fas fa-phone-alt"></i> Admissions: <a href="tel:+919047040413">+91 90470 40413</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:admissions@elite.edu">admissions@elite.edu</a></p><p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5:30PM</p></div>
+      <div class="footer-col"><h4>Newsletter</h4><form id="newsletterForm" class="newsletter-form"><input type="email" placeholder="Your email address" required><button type="submit" class="btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Subscribe</button></form></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 ELITE Institute of Engineering. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<!-- Fullscreen Map Modal -->
+<div id="mapFullscreenModal" class="map-fullscreen-modal">
+  <div class="map-fullscreen-content">
+    <button class="map-fullscreen-close" onclick="closeFullscreenMap()">
+      <i class="fas fa-times"></i>
+    </button>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.914248551511!2d80.19942707507537!3d12.990414287316825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52678f0d0d4b9f%3A0x2a7b8c9d5e6f7a8b!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+      allowfullscreen="" 
+      loading="lazy"
+      title="ELITE Institute Campus - Fullscreen Map">
+    </iframe>
+  </div>
+</div>
+
+<!-- AI Assistant -->
+<div class="ai-assistant"><div class="ai-fab" id="aiFab"><i class="fas fa-robot"></i></div><div class="ai-popup" id="aiPopup"><div class="ai-header"><span>ELITE AI Assistant</span><i class="fas fa-times" id="closeAiPopup"></i></div><div class="ai-messages" id="aiMessages"><div class="ai-msg ai-bot">Hello! Ask me about contact details, office hours, or how to reach specific departments!</div></div><div class="ai-input-area"><input type="text" id="aiInput"><button id="aiSendBtn"><i class="fas fa-paper-plane"></i></button></div></div></div>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float" onclick="window.open('https://wa.me/919047040413', '_blank')"><i class="fab fa-whatsapp"></i></div>
+
+<!-- Back to Top -->
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<!-- JavaScript Files -->
+<script src="assets/js/utilities.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/ai-assistant.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  // Enhanced Contact Form Handler
+  const contactForm = document.getElementById('contactForm');
+  const contactStatus = document.getElementById('contactFormStatus');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contactName')?.value;
+      const email = document.getElementById('contactEmail')?.value;
+      const phone = document.getElementById('contactPhone')?.value;
+      const subject = document.getElementById('contactSubject')?.value;
+      const message = document.getElementById('contactMessage')?.value;
+      
+      // Validation
+      if (!name || !email || !message) {
+        contactStatus.innerHTML = '⚠️ Please fill all required fields.';
+        contactStatus.className = 'form-status-modern error';
+        contactStatus.style.display = 'block';
+        setTimeout(() => { contactStatus.style.display = 'none'; }, 3000);
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        contactStatus.innerHTML = '⚠️ Please enter a valid email address.';
+        contactStatus.className = 'form-status-modern error';
+        contactStatus.style.display = 'block';
+        setTimeout(() => { contactStatus.style.display = 'none'; }, 3000);
+        return;
+      }
+      
+      // Success message
+      const subjectText = subject ? subject.split(' ')[0] : 'General';
+      contactStatus.innerHTML = `✓ Thank you ${name}! Your ${subjectText} enquiry has been sent successfully.<br><br>📧 We'll respond to ${email} within 24 hours.`;
+      contactStatus.className = 'form-status-modern success';
+      contactStatus.style.display = 'block';
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Also show notification
+      notifySuccess(`✨ Thank you ${name}! Your message has been sent successfully.\n\nWe'll respond to ${email} within 24 hours.`);
+      
+      setTimeout(() => { contactStatus.style.display = 'none'; }, 5000);
+    });
+  }
+  
+  // Map Functions
+  function openFullscreenMap() {
+    const modal = document.getElementById('mapFullscreenModal');
+    if (modal) {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  
+  function closeFullscreenMap() {
+    const modal = document.getElementById('mapFullscreenModal');
+    if (modal) {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  
+  function getDirections() {
+    const address = encodeURIComponent('Mambakkam – Medavakkam Main Road, Ponmar, Chennai, Tamil Nadu 600127');
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${address}`, '_blank');
+  }
+  
+  function shareLocation() {
+    const address = 'ELITE Institute of Engineering, Mambakkam – Medavakkam Main Road, Ponmar, Chennai - 600127';
+    if (navigator.share) {
+      navigator.share({
+        title: 'ELITE Institute of Engineering',
+        text: address,
+        url: 'https://maps.google.com/?q=12.9904,80.1994'
+      }).catch(() => {
+        navigator.clipboard.writeText(address);
+        notifySuccess('📍 Location copied to clipboard!');
+      });
+    } else {
+      navigator.clipboard.writeText(address);
+      notifySuccess('📍 Location copied to clipboard!');
+    }
+  }
+  
+  // Newsletter
+  document.getElementById('newsletterForm')?.addEventListener('submit', (e) => { 
+    e.preventDefault(); 
+    notifySuccess('✓ Thank you for subscribing to ELITE newsletter!'); 
+    e.target.reset(); 
+  });
+  
+  // Close fullscreen modal on escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeFullscreenMap();
+    }
+  });
+  
+  // Make functions global
+  window.openFullscreenMap = openFullscreenMap;
+  window.closeFullscreenMap = closeFullscreenMap;
+  window.getDirections = getDirections;
+  window.shareLocation = shareLocation;
+</script>
+
+<style>
+  /* Additional styles for the enhanced layout */
+  .map-form-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  }
+  
+  .map-form-grid.premium-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .map-container-premium {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .map-container-premium:hover {
+    transform: translateY(-5px);
+  }
+  
+  .map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+  }
+  
+  .map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .map-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .map-control-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .map-control-btn:hover {
+    background: var(--gradient-gold);
+    color: #000;
+    transform: scale(1.05);
+  }
+  
+  .map-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: var(--gold);
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .location-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .info-card-premium {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card-premium:hover {
+    transform: translateX(8px);
+    border-color: var(--gold);
+  }
+  
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  
+  .info-content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .info-content p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  .info-content small {
+    font-size: 0.7rem;
+    color: var(--gold);
+  }
+  
+  .map-fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .map-fullscreen-modal.open {
+    display: flex;
+  }
+  
+  .map-fullscreen-content {
+    width: 95%;
+    height: 90%;
+    background: var(--bg-secondary);
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .map-fullscreen-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .map-fullscreen-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    border: none;
+    z-index: 10;
+  }
+  
+  .map-fullscreen-close:hover {
+    background: var(--gold);
+    color: #000;
+  }
+  
+  @media (max-width: 1024px) {
+    .map-form-grid.premium-layout {
+      grid-template-columns: 1fr;
+    }
+    .location-info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .map-wrapper {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .location-info-grid {
+      grid-template-columns: 1fr;
+    }
+    .map-wrapper {
+      height: 350px;
+    }
+    .map-controls {
+      flex-direction: row;
+      top: 10px;
+      right: 10px;
+    }
+  }
+</style>
+</body>
+</html>
