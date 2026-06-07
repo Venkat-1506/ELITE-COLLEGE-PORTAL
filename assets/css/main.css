@@ -3956,3 +3956,33 @@ body.dark-mode .notification-info .notification-content {
     justify-content: center;
   }
 }
+/* ===== MOBILE OVERFLOW FIX ===== */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .dept-cards-grid,
+    .why-elite-grid,
+    .facilities-grid,
+    .home-gallery-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dept-card,
+    .why-card,
+    .facility-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .dept-card-content {
+        width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
