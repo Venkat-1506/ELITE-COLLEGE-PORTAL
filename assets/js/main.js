@@ -191,3 +191,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+const helpline = document.querySelector('.counselling-bar');
+const navbar = document.querySelector('.navbar');
+
+if (helpline && navbar) {
+    window.addEventListener('scroll', () => {
+
+        if (window.scrollY > 50) {
+            helpline.style.transform = 'translateY(-100%)';
+            navbar.classList.add('fixed-nav');
+        } else {
+            helpline.style.transform = 'translateY(0)';
+            navbar.classList.remove('fixed-nav');
+        }
+
+    });
+}
