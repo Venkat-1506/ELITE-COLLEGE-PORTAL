@@ -8,7 +8,12 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ---
+# 🎓 ELITE COLLEGE PORTAL
 
+🌐 **Live Demo:** https://elite-college-portal.netlify.app/
+
+> A modern and responsive engineering college website designed to provide students, parents, faculty, and visitors with a seamless digital campus experience.
+> 
 ## 📖 Overview
 
 ELITE College Portal is a multi-page educational web platform developed to showcase academic excellence, admissions, departments, placements, campus facilities, events, and student engagement activities.
